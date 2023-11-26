@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="download.jfif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ</title>
+</head>
+<body onload="on()" style="background-size: cover;" background="abstract-music-notes-blurry-lights-bright-background_250469-15899.avif" >
+    <h1 id="name" style="text-align: center; color: aliceblue; background-image: url(abstract-music-notes-blurry-lights-bright-background_250469-15899.avif);"></h1>
+    <button  style=" float: right; background-image: url(abstract-music-notes-blurry-lights-bright-background_250469-15899.avif); color: aliceblue;" onclick="back()">BACK-></button>
+    <img src="download.jfif" width="50px" height="50px">
+    
+    
+</body>
+<style>
+canvas
+{
+  box-shadow: 10px 10px 10px lightseagreen;
+  border-radius: 10px;
+
+
+
+}
+</style>
+</html>
+<script>
+function back(){
+    window.location="index.html"
+}
+function setup(){
+ object_detector=ml5.objectDetector('poseNet',modeLoaded);
+}
+function on(){
+ name=localStorage.getItem("username");
+ document.getElementById("name").innerHTML="WELCOME "+name;
+}
+
+</script>

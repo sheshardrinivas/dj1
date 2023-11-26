@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="download.jfif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ</title>
+</head>
+<body background="abstract-music-notes-blurry-lights-bright-background_250469-15899.avif">
+    <h1 style="text-align: center; color: aliceblue; background-image: url(abstract-music-notes-blurry-lights-bright-background_250469-15899.avif);">DJ</h1>
+<img src="download.jfif" width="50px" height="50x">
+
+ <center>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <input id="hi" placeholder="♫ UESER NAME" type="text" style=" text-align: center; color: aliceblue; background-color: black;">
+
+ </center>
+<script>
+  window.addEventListener("keydown",my_keydown)
+  function my_keydown(e){
+
+    var value=document.getElementById("hi").value;
+    keyPressed=e.keyCode;
+   console.log(keyPressed);
+   if (keyPressed==13) {
+       localStorage.setItem("username",value);
+       window.location="dj.html"
+    
+    }
+}
+</script>
+</body>
+</html>
+<style>
+ body{
+    background-size: cover;
+ }
+   
+</style>
